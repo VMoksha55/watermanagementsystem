@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Water – Live Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External Libraries -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="logout" onclick="logout()">Logout</button>
+
+        <h1>Smart Water Dashboard</h1>
+
+        <button id="toggleUser">Show User Details</button>
+
+        <div class="user-card" id="userCard">
+            <h3>User Details</h3>
+            <p><b>Name:</b> <span id="uName"></span></p>
+            <p><b>Address:</b> <span id="uAddress"></span></p>
+            <p><b>Block:</b> <span id="uBlock"></span></p>
+            <p><b>City:</b> <span id="uCity"></span></p>
+        </div>
+
+        <div class="card">
+            <h3>Latest Reading</h3>
+            <p id="latest">Loading...</p>
+            <p><b>TDS:</b> <span id="tdsValue">--</span> ppm</p>
+            <p><b>Turbidity:</b> <span id="turbidityValue">--</span> NTU</p>
+            <p><b>Temperature:</b> <span id="tempValue">--</span> °C</p>
+            <p><b>Flow:</b> <span id="flowValue">--</span> L/min</p>
+        </div>
+
+        <div class="card">
+            <h3>Alerts</h3>
+            <p id="alertBox"></p>
+        </div>
+
+        <div class="card">
+            <h3>Live Graphs</h3>
+            <canvas id="tdsChart"></canvas>
+            <canvas id="turbidityChart"></canvas>
+            <canvas id="tempChart"></canvas>
+            <canvas id="flowChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>TDS (ppm)</th>
+                        <th>Turbidity (NTU)</th>
+                        <th>Temperature (°C)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Smart Water Dashboard Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.logout {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+}
+
+.logout:hover {
+    background: linear-gradient(45deg, #c82333, #a02622);
+}
+
+.user-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+canvas {
+    max-height: 300px !important;
+    width: 100% !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 98%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .user-card {
+        width: 100%;
+    }
+}
+
+/* Alert Styles */
+.alert-good {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.alert-bad {
+    color: #dc3545;
+    font-weight: bold;
+}
